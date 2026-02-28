@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>silly page</title>
+        <link rel="icon" href="../assets/icon.png">
+        <link rel="stylesheet" type="text/css" href="../resources/websitestyle.css">
+        <script src="../resources/scripts.js"></script>
+    </head>
+    <body>
+        <ul class="cooltoplist"> 
+            <li class="top"><a class="toph" href="../index.html"></a></li>
+            <li class="top"><a class="topu" href="uni.html"></a></li>
+            <li class="top"><a class="topp" href="projects.html"></a></li>
+            <li class="top"><a class="topar" href="aboutmeboring.html"></a></li>
+            <li class="top"><a class="topae" href="aboutme.html"></a></li>
+            <li class="top"><a class="topg" href="gaming.html"></a></li>
+            <li class="top"><a class="tops" href="silly.html"></a></li>
+        </ul>
+        <p style="text-align:center;"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> I made the page long by spamming line breaks, which is probably a sin, sorry</p>
+        <div id="dabox" onmousemove="recolor(event)" style="height: 255px;width:255px; position: fixed; left: 0px; bottom: 0px; z-index: 99;background:white;"><b>HOVER THIS BOX FOR FUNNY COLORS:)</b></div>
+        <div id="ballin1" onscroll="ballin()" style="opacity: 1; max-height: 300px; position: fixed; bottom: 0px; right: 0px; z-index: 9;">
+        <img src="../imgs/Ballin1.png" height="150" width="450"/></div>
+        <div id="ballin2" style="max-height: 300px; position: fixed; bottom: 0px; right: 0px; z-index: 8;">
+        <img src="../imgs/Ballin2.png" height="150" width="450"/></div>
+        <script>
+            function getScrollFrac() {
+                var h = document.documentElement, 
+                b = document.body,
+                st = 'scrollTop',
+                sh = 'scrollHeight';
+                return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight);
+            }
+            function ballin() {
+                var sp = getScrollFrac();
+                var opac = 1-sp;
+                document.getElementById("ballin1").style.opacity = opac;
+            }
+            window.addEventListener("scroll", () => {ballin();})
+
+                
+        </script>
+        <div class="ldoodle"></div>
+        <div class="rdoodle"></div>
+        <div class="dvd"><img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjc5dTg5cXN5YWNseG1xdHMzdWFubWVuN3Iwb3ZjMXNmYzIxbDlwcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/tpQaNH6MBq00uZHaxi/giphy.gif" height="150"/></div>
+    </body>
+</html>

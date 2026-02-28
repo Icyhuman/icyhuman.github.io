@@ -1,0 +1,40 @@
+.slide {
+  display: none;
+  margin: auto;
+}
+
+.slideframe {
+  max-width: 75%;
+  position: relative;
+  margin: auto;
+  border: 5px solid black;
+  --index: 0;
+}
+
+.prev {
+  position: absolute;
+  top: 50%;
+  left:0px;
+  background-color: rgba(255,255,255,0.3);
+  font-size: 35px;
+}
+
+.next {
+  position: absolute;
+  top: 50%;
+  right:0px;
+  background-color: rgba(255,255,255,0.3);
+  font-size: 35px;
+}
+
+.slide2 {
+  display: none;
+  margin: auto;
+}
+
+.slideframe2 {
+  max-width: 75%;
+  position: relative;
+  margin: auto;
+  border: 5px solid black;
+}

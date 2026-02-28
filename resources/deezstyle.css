@@ -1,0 +1,136 @@
+ul.cooltoplist {
+    list-style-type: none; margin-left: -8%; margin-right: -8%; padding: 0;
+    display:flex;
+    justify-content: center;
+}
+
+li.top{
+    text-align: center; font-size: 20px;
+    display: inline;
+    width: 14%;
+    margin-left: -0.3%; margin-right: -0.3%;
+}
+
+a.top{
+    text-decoration: none; width: 15%; height: 50px; background-color: black; float: left; padding: 10px; padding-top: 20px; margin-left: 3px; color: plum;
+}
+
+a.top:hover{
+    background-color: plum; color: black;
+}
+
+
+div.ldoodle{
+    width:9%; position: absolute; top: 0; bottom:0; left: 0px; z-index: -1;
+    background-image: url('../assets/leftdoodle.png'); background-repeat: repeat-y; background-size: contain;
+}
+div.rdoodle{
+    width:8.7%; position: absolute; top: 0; bottom:0; right: 0px; z-index: -1;
+    background-image: url('../assets/rightdoodle.png'); background-repeat: repeat-y; background-size: contain;
+}
+
+
+a.toph{
+    text-decoration: none; width: 100%; aspect-ratio: 12 / 6; background-image: url('../assets/home.png'); float: left; padding: 10px; padding-top: 20px; margin-left: 3px; color: plum;
+    background-size: contain; background-repeat: no-repeat;
+}
+
+a.toph:hover{
+    background-image: url('../assets/homeh.png');
+    background-size: contain;
+}
+a.topu{
+    text-decoration: none; width: 100%; aspect-ratio: 12 / 6; background-image: url('../assets/uni.png'); float: left; padding: 10px; padding-top: 20px; margin-left: 3px; color: plum;
+    background-size: contain; background-repeat: no-repeat;
+}
+
+a.topu:hover{
+    background-image: url('../assets/unih.png');
+    background-size: contain;
+}
+a.topp{
+    text-decoration: none; width: 100%; aspect-ratio: 12 / 6; background-image: url('../assets/misc.png'); float: left; padding: 10px; padding-top: 20px; margin-left: 3px; color: plum;
+    background-size: contain; background-repeat: no-repeat;
+}
+
+a.topp:hover{
+    background-image: url('../assets/misch.png');
+    background-size: contain;
+}
+a.topar{
+    text-decoration: none; width: 100%; aspect-ratio: 12 / 6; background-image: url('../assets/ampro.png'); float: left; padding: 10px; padding-top: 20px; margin-left: 3px; color: plum;
+    background-size: contain; background-repeat: no-repeat;
+}
+
+a.topar:hover{
+    background-image: url('../assets/amproh.png');
+    background-size: contain;
+}
+a.topae{
+    text-decoration: none; width: 100%; aspect-ratio: 12 / 6; background-image: url('../assets/ampers.png'); float: left; padding: 10px; padding-top: 20px; margin-left: 3px; color: plum;
+    background-size: contain; background-repeat: no-repeat;
+}
+
+a.topae:hover{
+    background-image: url('../assets/ampersh.png');
+    background-size: contain;
+}
+a.topg{
+    text-decoration: none; width: 100%; aspect-ratio: 12 / 6; background-image: url('../assets/game.png'); float: left; padding: 10px; padding-top: 20px; margin-left: 3px; color: plum;
+    background-size: contain; background-repeat: no-repeat;
+}
+
+a.topg:hover{
+    background-image: url('../assets/gameh.png');
+    background-size: contain;
+}
+a.tops{
+    text-decoration: none; width: 100%; aspect-ratio: 12 / 6; background-image: url('../assets/html.png'); float: left; padding: 10px; padding-top: 20px; margin-left: 3px; color: plum;
+    background-size: contain; background-repeat: no-repeat;
+}
+
+a.tops:hover{
+    background-image: url('../assets/htmlh.png');
+    background-size: contain;
+}
+
+
+
+
+body{
+    background-color: rgb(204, 194, 182); color: black;
+}
+
+body{
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+
+img{
+    max-width: 100%;
+}
+
+/* The funny dvd logo from my Spacehey profile with added spin action*/
+@keyframes updown{
+  from{ bottom: 0%; }
+  to{ bottom: calc(100% - 150px); }
+}
+@keyframes leftright{
+  from{ right: 0%; }
+  to{ right: calc(100% - 268px); }
+}
+@keyframes rarespin{
+  0%{ transform:rotate(0deg); }
+  48%{ transform:rotate(0deg); }
+  50%{ transform:rotate(360deg); }
+  100%{ transform:rotate(360deg); }
+}
+div.dvd{
+    animation: updown 4.29s infinite linear, leftright 5.76s infinite linear, rarespin 10s infinite linear;
+    animation-direction: alternate;
+    max-height: 300px; 
+    position: fixed; 
+    bottom: 0px; 
+    z-index: 99;
+}
