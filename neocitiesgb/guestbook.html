@@ -11,24 +11,6 @@
     <!-- Super duper copyright notice i dont care if you copy this code but if you do then 
      shoutout to the original creator, Icyhuman. Check out my cool site at snowcape.neocities.org-->
     <body>
-        <div class="navbarcont">
-            <a href="index.html"><div class="navbara"></div></a>
-            <a href="map.html"><div class="navbarb"></div></a>
-            <a href="fashion.html"><div class="navbarc"></div></a>
-            <a href="tourism.html"><div class="navbard"><p style="font-size: xx-large; color: red;"><b>WIP coming soon</b></p></div></a>
-            <a href="locals.html"><div class="navbare"><p style="font-size: xx-large; color: red;"><b>WIP coming soon</b></p></div></a>
-            <a href="contact.html"><div class="navbarf"></div></a>
-        </div>
-        <div class="cont">
-        <img class="contactletter" src="imgs/mail.jpg" style="position: absolute;">
-        <p style="position: absolute; top: 160px; left: 320px;right: 360px;font-size: x-large;color: rgb(4, 54, 4);font-family: Arial, Helvetica, sans-serif;"><b>
-            Thank you so much for checking out my website! If you want to find me elsewhere, there's a few options; I go by Icyhuman on <a href="https://discord.com/users/202149401148391424">Discord</a> and <a href="https://steamcommunity.com/id/icyhuman/">Steam</a>.
-            My SpaceHey profile is <a href="https://spacehey.com/handsomegamer">Super duper cool and handsome gamer</a>.
-            My switch friend code is SW-0790-5439-8988.
-            I also have another website at <a href="https://icyhuman.github.io/index.html">icyhuman.github.io</a>.
-            This section is still kinda WIP, I guess I'll have to find some other service if I want my ideal guestbook.
-        </b></p>
-        </div>
         <div class="letterarea" id="larea" style="width: 1280px; height: 1280px; position: relative; margin: auto;">
             <!-- begin wwww.htmlcommentbox.com -->
             <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
@@ -108,9 +90,9 @@
             });
             function mload(){
                 for(comment in comments){
-                    let name = comments.author
-                    let date = comments.date
-                    let text = comments.comment
+                    let name = comments[comment].author
+                    let date = comments[comment].date
+                    let text = comments[comment].comment
                     let dreal = new Date(date)
                     date=dreal.toDateString()
                     console.log(name)
