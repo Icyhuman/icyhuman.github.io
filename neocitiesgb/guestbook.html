@@ -70,24 +70,30 @@
                 ["This layout only has room for 15 letters before I need to make pages. At the current pace, that means I have to fix it in a couple years lol",
                 "Fred Flintstone","Sample date 25th"]
             ]
-            for(mail in mailbag){
-                makeletter(mailbag[mail][0],mailbag[mail][1],mailbag[mail][2])
-            }
+            //for(mail in mailbag){
+            //    makeletter(mailbag[mail][0],mailbag[mail][1],mailbag[mail][2])
+            //}
 
-            for(let i=0;i<6;i++ ){
-            makeletter(
-                "Filler letters because I don't want my layout feeling too empty. Also I need to make graphics for the holes in the layout",
-                "Myself",
-                "18 Decembulon 2140"
-            )}
+            //for(let i=0;i<6;i++ ){
+            //makeletter(
+            //    "Filler letters because I don't want my layout feeling too empty. Also I need to make graphics for the holes in the layout",
+            //    "Myself",
+            //    "18 Decembulon 2140"
+            //)}
 
-            const atabook = document.getElementById('HCB_comment_box');
-
+            const box = document.getElementById('HCB_comment_box');
             window.addEventListener('load', function() {
                 console.log("this")
                 mload();
             });
             function mload(){
+
+                box.children[0].style.display="none"
+                box.children[2].style.display="none"
+                box.children[4].style.display="none"
+                box.children[5].style.display="none"
+                box.children[3].style.width="600px"
+
                 for(comment in comments){
                     let name = comments[comment].author
                     let date = comments[comment].date
