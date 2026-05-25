@@ -1,0 +1,129 @@
+body{
+    background-image: url(imgs/bg.png);
+    animation: bganim 10s linear forwards infinite;
+}
+
+@keyframes bganim{
+    0%{background-position: 0% 0px;}
+    10%{background-position: 1% 60px;}
+    20%{background-position: -1% 120px;}
+    30%{background-position: 1% 180px;}
+    40%{background-position: 0% 240px;}
+    50%{background-position: -1% 300px;}
+    60%{background-position: -0.5% 360px;}
+    70%{background-position: 0% 420px;}
+    80%{background-position: 0.5% 480px;}
+    90%{background-position: 0.75% 540px;}
+    100%{background-position: 0% 600px;}
+}
+
+
+img.pin{
+    position: absolute; z-index: 3; height: 34px; width:25px;
+}
+
+div.mapbox{
+    border-style: solid;background-color: lavender;border-width: 8px;border-color: rgb(65, 19, 109);width: 1300px; border-radius: 25px; margin: auto;
+}
+
+div.cont{
+    position: relative; 
+    height: 750px; width: 1280px;  margin: auto;
+    margin-top: 20px;
+}
+
+@keyframes pinhover{
+  0%{transform:scale(1) translateX(0px) translateY(0px);  }
+
+  100%{transform:scale(1.2) translateX(0px) translateY(-3px);  }
+}
+img.pin:hover{
+    animation: pinhover 0.3s linear;animation-fill-mode: forwards;
+}
+
+img.box{
+    z-index: 4; display: none; position: absolute; left: 0px; top: 0px;
+    animation: boxappear 0.3s linear;animation-fill-mode: forwards;
+}
+
+img.boxgo{
+    animation: boxgone 0.3s linear;animation-fill-mode: forwards;
+}
+
+@keyframes boxappear{
+  0%{transform:scale(0) ;  }
+
+  100%{transform:scale(1) ;  }
+}
+@keyframes boxgone{
+  0%{transform:scale(1) ;  }
+
+  100%{transform:scale(0) ;  }
+}
+
+div.navbarcont{
+    position: relative; 
+    width: 1280px; 
+    height: 165px;
+    margin: auto;
+}
+div.navbara{
+    background-image: url("imgs/welcome.png");
+    position: absolute;
+    left: 0px;
+    width: 490px;
+    height: 165px;
+}
+div.navbara:hover{
+    background-image: url(imgs/welcomeh.png);
+}
+div.navbarb{
+    background-image: url("imgs/map.png");
+    position: absolute;
+    left: 490px;
+    width: 145px;
+    height: 165px;
+}
+div.navbarb:hover{
+    background-image:url("imgs/maph.png");
+}
+div.navbarc{
+    background-image: url("imgs/fsh.png");
+    position: absolute;
+    left: 635px;
+    width: 163px;
+    height: 165px;
+}
+div.navbarc:hover{
+    background-image:url("imgs/fshh.png");
+}
+div.navbard{
+    background-image: url("imgs/tou.png");
+    position: absolute;
+    left: 798px;
+    width: 158px;
+    height: 165px;
+}
+div.navbard:hover{
+    background-image:url("imgs/touh.png");
+}
+div.navbare{
+    background-image: url("imgs/mtl.png");
+    position: absolute;
+    left: 956px;
+    width: 158px;
+    height: 165px;
+}
+div.navbare:hover{
+    background-image:url("imgs/mtlh.png");
+}
+div.navbarf{
+    background-image: url("imgs/cnt.png");
+    position: absolute;
+    left: 1114px;
+    width: 166px;
+    height: 165px;
+}
+div.navbarf:hover{
+    background-image:url("imgs/cnth.png");
+}

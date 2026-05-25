@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Welcome to Snowcape - Contact</title>
+        <link rel="icon" href="imgs/flag.png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="cstyle.css">
+        <script src="script.js"></script>
+    </head>
+    <!-- Super duper copyright notice i dont care if you copy this code but if you do then 
+     shoutout to the original creator, Icyhuman. Check out my cool site at snowcape.neocities.org-->
+    <body>
+        <div class="navbarcont">
+            <a href="index.html"><div class="navbara"></div></a>
+            <a href="map.html"><div class="navbarb"></div></a>
+            <a href="fashion.html"><div class="navbarc"></div></a>
+            <a href="tourism.html"><div class="navbard"><p style="font-size: xx-large; color: red;"><b>WIP coming soon</b></p></div></a>
+            <a href="locals.html"><div class="navbare"><p style="font-size: xx-large; color: red;"><b>WIP coming soon</b></p></div></a>
+            <a href="contact.html"><div class="navbarf"></div></a>
+        </div>
+        <div class="cont">
+        <img class="contactletter" src="imgs/mail.jpg" style="position: absolute;">
+        <p style="position: absolute; top: 160px; left: 320px;right: 360px;font-size: x-large;color: rgb(4, 54, 4);font-family: Arial, Helvetica, sans-serif;"><b>
+            Thank you so much for checking out my website! If you want to find me elsewhere, there's a few options; I go by Icyhuman on <a href="https://discord.com/users/202149401148391424">Discord</a> and <a href="https://steamcommunity.com/id/icyhuman/">Steam</a>.
+            My SpaceHey profile is <a href="https://spacehey.com/handsomegamer">Super duper cool and handsome gamer</a>.
+            My switch friend code is SW-0790-5439-8988.
+            I also have another website at <a href="https://icyhuman.github.io/index.html">icyhuman.github.io</a>.
+            This section is still kinda WIP, I guess I'll have to find some other service if I want my ideal guestbook.
+        </b></p>
+        </div>
+        <div class="letterarea" id="larea" style="width: 1280px; height: 1280px; position: relative; margin: auto;">
+            <!-- begin wwww.htmlcommentbox.com -->
+            <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
+            <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+            <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24iRV4k9fjBcVMo5S7aJ.SF."+"&opts=16798&num=10&ts=1779731807252");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+            <!-- end www.htmlcommentbox.com -->
+            <a><div style="position: absolute;left: 320px;top: 0px; height: 200px;width: 300px; background-color: rgb(216, 91, 247);overflow: scroll;"><p>Welp<br>Turns out some Neocities policy change really limits my guestbook options to pretty much just iFrames, which complicates my cool guestbook idea:( Just use the guestbook on the left I guess. I'll manually copy the comments into my cool letter layout or something lol.</p></div></a>
+        </div>
+        <script>
+            const larea=document.getElementById('larea')
+            function makeletter(text, name, date){
+                const letter = document.createElement("div");
+                letter.className="letter"
+                const dearj = document.createElement("p");
+                dearj.className="dearj"
+                dearj.innerHTML="Dear Jørgen"
+                const mainlbox = document.createElement("div");
+                mainlbox.className="mainlbox"
+                const mainl = document.createElement("p");
+                mainl.className="mainl"
+                mainl.innerHTML=text
+                const froml = document.createElement("p");
+                froml.className="froml"
+                froml.innerHTML="From "+name
+                const datel = document.createElement("p");
+                datel.className="datel"
+                datel.innerHTML=date
+
+                larea.appendChild(letter)
+                letter.appendChild(dearj)
+                letter.appendChild(mainlbox)
+                letter.appendChild(froml)
+                letter.appendChild(datel)
+                mainlbox.appendChild(mainl)
+
+                let styles=["hearts","cool","clouds","cherry","airmail","grafitti","dragonflies","stars","torn","roses","bluesky"]
+                let style = Math.floor(Math.random()* 11);
+                letter.classList.add(styles[style])
+
+                let rotate = Math.floor(Math.random()* 26)-13;
+                letter.style.transform="Rotate("+rotate+"deg)"
+                letter.addEventListener('mouseenter', () => {
+                    letter.style.transform = 'Rotate(0deg)';
+                    });
+                letter.addEventListener('mouseleave', () => {
+                    letter.style.transform = "Rotate("+rotate+"deg)";
+                    });
+
+
+            }
+
+
+            const mailbag=[
+                ["Me when I make sample data to make sure my code works",
+                "Mr. testing","Glontchtober 65th"],
+                ["Me when I create a second piece of test data because handling multiple objects properly is important",
+                "Mrs. testing","Baldcember 900th"],
+                ["This layout only has room for 15 letters before I need to make pages. At the current pace, that means I have to fix it in a couple years lol",
+                "Fred Flintstone","Sample date 25th"]
+            ]
+            for(mail in mailbag){
+                makeletter(mailbag[mail][0],mailbag[mail][1],mailbag[mail][2])
+            }
+
+            for(let i=0;i<12;i++ ){
+            makeletter(
+                "Filler letters because I don't want my layout feeling too empty. Also I need to make graphics for the holes in the layout",
+                "Myself",
+                "18 Decembulon 2140"
+            )}
+
+            const atabook = document.getElementById('atabook');
+
+            atabook.addEventListener('load', function() {
+                console.log(this)
+                mload();
+            });
+            function mload(){
+                let messages=document.getElementById("messages")
+                console.log(atabook.contentWindow.document.body.innerHTML)
+            }
+
+        </script>
+    </body>
+</html>
