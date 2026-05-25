@@ -100,15 +100,22 @@
                 "18 Decembulon 2140"
             )}
 
-            const atabook = document.getElementById('atabook');
+            const atabook = document.getElementById('HCB_comment_box');
 
             atabook.addEventListener('load', function() {
                 console.log(this)
                 mload();
             });
             function mload(){
-                let messages=document.getElementById("messages")
-                console.log(atabook.contentWindow.document.body.innerHTML)
+                let messages=document.getElementsByClassName("comment")
+                for(comment in comments){
+                    let name = comment.children[0].children[0].innerHTML
+                    let date = comment.children[0].children[1].innerHTML
+                    let text = comment.children[0].children[2].innerHTML
+                    console.log(name)
+                    console.log(date)
+                    console.log(text)
+            }
             }
 
         </script>
