@@ -93,7 +93,7 @@
                 makeletter(mailbag[mail][0],mailbag[mail][1],mailbag[mail][2])
             }
 
-            for(let i=0;i<12;i++ ){
+            for(let i=0;i<6;i++ ){
             makeletter(
                 "Filler letters because I don't want my layout feeling too empty. Also I need to make graphics for the holes in the layout",
                 "Myself",
@@ -107,15 +107,20 @@
                 mload();
             });
             function mload(){
-                let messages=document.getElementsByClassName("comment")
                 for(comment in comments){
-                    let name = comment.children[0].children[0].innerHTML
-                    let date = comment.children[0].children[1].innerHTML
-                    let text = comment.children[0].children[2].innerHTML
+                    let name = comments.author
+                    let date = comments.date
+                    let text = comments.comment
+                    let dreal = new Date(date)
+                    date=dreal.toDateString()
                     console.log(name)
                     console.log(date)
                     console.log(text)
+                    mailbag.push([text,name,date])
             }
+            }
+            for(mail in mailbag){
+                makeletter(mailbag[mail][0],mailbag[mail][1],mailbag[mail][2])
             }
 
         </script>
