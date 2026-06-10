@@ -93,6 +93,9 @@
                 box.children[4].style.display="none"
                 box.children[5].style.display="none"
                 box.children[3].style.width="600px"
+                let desc=document.getElementsByClassName("home-desc")
+                console.log(desc.children)
+                desc.innerHTML="Powered by HTLM comment Box"
 
                 for(comment in comments){
                     let name = comments[comment].author
