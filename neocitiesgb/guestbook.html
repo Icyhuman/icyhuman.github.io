@@ -147,8 +147,8 @@
                     //If the firs comment has changed it is time, if HTMLcommentbox ever reworks their code I am doomed lolmao
                     console.log(old)
                     console.log(box.children[4].children[0].id)
-                    console.log(box.children[4].children[0].id===old)
-                    if (!box.children[4].children[0].id===old) {
+                    console.log(box.children[4].children[0].id!==old)
+                    if (box.children[4].children[0].id!==old) {
                         mload()
                         clearInterval(thelooker); 
                     }
