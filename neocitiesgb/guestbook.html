@@ -117,6 +117,9 @@
                 navi.style.position="absolute"
                 navi.style.left="970px"
                 navi.style.top="880px"
+                navi.addEventListener("click", function(){
+                    resetgb()
+                })
 
                 for(comment in comments){
                     let name = comments[comment].author
@@ -130,6 +133,13 @@
                     makeletter(text,name,date)
                     mailbag.push([text,name,date])
             }
+            }
+            function resetgb() {
+                letters=document.getElementsByClassName("letter")
+                for(var letter of letters){
+                    letter.remove()
+                }
+                mload()
             }
 
         </script>
