@@ -117,9 +117,11 @@
                 navi.style.position="absolute"
                 navi.style.left="970px"
                 navi.style.top="880px"
-                navi.addEventListener("click", function(){
-                    resetgb()
-                })
+                for(child of navi.children){
+                    console.log(child)
+                    child.addEventListener("click", function(){
+                    setTimeout(resetgb, 1)
+                })}
 
                 for(comment in comments){
                     let name = comments[comment].author
