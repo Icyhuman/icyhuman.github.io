@@ -87,6 +87,20 @@
                 console.log("this")
                 mload();
             });
+
+            //Absolutely immoral code, I am playing with HTMLcommentbox like it is playdough
+            window.addEventListener('load', function() {
+                const TheLooker = new MutationObserver((mutationsList) => {
+                    for (const mutation of mutationsList) {
+                    if (mutation.addedNodes.length > 0) {
+                        TheLooker.disconnect();
+                        resetgb()
+                        TheLooker.observe(box, { subtree: true, childList: true })
+                    }
+                    }
+                });
+            });
+
             function mload(){
 
                 box.children[0].style.display="none"
@@ -117,11 +131,11 @@
                 navi.style.position="absolute"
                 navi.style.left="970px"
                 navi.style.top="880px"
-                for(child of navi.children){
-                    console.log(child)
-                    child.addEventListener("click", function(){
-                    setTimeout(resetgb, 1)
-                })}
+                //for(child of navi.children){
+                //    console.log(child)
+                //    child.addEventListener("click", function(){
+                //    setTimeout(resetgb, 1)
+                //})}
 
                 for(comment in comments){
                     let name = comments[comment].author
