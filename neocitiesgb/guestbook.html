@@ -135,9 +135,11 @@
             }
             }
             function resetgb() {
-                letters=document.getElementsByClassName("letter")
+                let letters=document.getElementsByClassName("letter")
+                let larray=Array.from(letters)
                 console.log(letters)
-                letters.array.forEach(letter => letter.remove());
+                console.log(larray)
+                larray.forEach(letter => letter.remove());
                 mload()
             }
         </script>
