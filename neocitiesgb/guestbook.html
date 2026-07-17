@@ -136,11 +136,15 @@
             }
             function resetgb() {
                 letters=document.getElementsByClassName("letter")
+                console.log(letters)
                 for(var letter of letters){
                     letter.remove()
                 }
-                mload()
-            }
+                window.addEventListener('load', function() {
+                console.log("this")
+                mload();
+                });
+                }
 
         </script>
     </body>
