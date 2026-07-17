@@ -137,15 +137,9 @@
             function resetgb() {
                 letters=document.getElementsByClassName("letter")
                 console.log(letters)
-                for(var letter of letters){
-                    letter.remove()
-                }
-                window.addEventListener('load', function() {
-                console.log("this")
-                mload();
-                });
-                }
-
+                letters.array.forEach(letter => letter.remove());
+                mload()
+            }
         </script>
     </body>
 </html>
