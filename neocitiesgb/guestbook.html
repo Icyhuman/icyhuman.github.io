@@ -92,11 +92,12 @@
                 box.children[0].style.display="none"
                 box.children[2].style.display="none"
                 box.children[4].style.display="none"
-                box.children[5].style.display="none"
+                box.children[6].style.display="none"
                 box.children[3].style.width="280px"
                 box.children[3].style.position="absolute"
                 box.children[3].style.left="20px"
                 box.children[3].style.top="40px"
+                let navi=box.children[5]
                 const letterfield = document.getElementById('hcb_form_content')
                 console.log(letterfield.parentElement.parentElement.parentElement)
                 const namefield = document.getElementById('hcb_form_name')
@@ -113,6 +114,9 @@
                 desc[0].style.display
                 desc[0].innerHTML="Powered by <a target='_blank' href='https://www.htmlcommentbox.com'>Html Comment Box</a>"
                 console.log(desc[0])
+                navi.style.position="absolute"
+                navi.style.left="970px"
+                navi.style.top="880px"
 
                 for(comment in comments){
                     let name = comments[comment].author
