@@ -88,19 +88,6 @@
                 mload();
             });
 
-            //Absolutely immoral code, I am playing with HTMLcommentbox like it is playdough
-            window.addEventListener('load', function() {
-                const TheLooker = new MutationObserver((mutationsList) => {
-                    for (const mutation of mutationsList) {
-                    if (mutation.addedNodes.length > 0) {
-                        TheLooker.disconnect();
-                        resetgb()
-                        TheLooker.observe(box, { subtree: true, childList: true })
-                    }
-                    }
-                });
-            });
-
             function mload(){
 
                 box.children[0].style.display="none"
@@ -131,11 +118,11 @@
                 navi.style.position="absolute"
                 navi.style.left="970px"
                 navi.style.top="880px"
-                //for(child of navi.children){
-                //    console.log(child)
-                //    child.addEventListener("click", function(){
-                //    setTimeout(resetgb, 1)
-                //})}
+                for(child of navi.children){
+                    console.log(child)
+                    child.addEventListener("click", function(){
+                    resetgb(box.children[4].children[0])
+                })}
 
                 for(comment in comments){
                     let name = comments[comment].author
@@ -150,13 +137,21 @@
                     mailbag.push([text,name,date])
             }
             }
-            function resetgb() {
+            function resetgb(old) {
                 let letters=document.getElementsByClassName("letter")
                 let larray=Array.from(letters)
                 console.log(letters)
                 console.log(larray)
                 larray.forEach(letter => letter.remove());
-                setTimeout(mload, 1)
+                let thelooker=setInterval(() => {
+                    //If the firs comment has changed it is time, if HTMLcommentbox ever reworks their code I am doomed lolmao
+                    console.log(old)
+                    console.log(box.children[4].children[0])
+                    if (!box.children[4].children[0]===old) {
+                        mload()
+                        clearInterval(thelooker); 
+                    }
+                    }, 200);
             }
         </script>
     </body>
