@@ -121,7 +121,7 @@
                 for(child of navi.children){
                     console.log(child)
                     child.addEventListener("click", function(){
-                    resetgb(box.children[4].children[0])
+                    resetgb(box.children[4].children[0].id)
                 })}
 
                 for(comment in comments){
@@ -146,8 +146,9 @@
                 let thelooker=setInterval(() => {
                     //If the firs comment has changed it is time, if HTMLcommentbox ever reworks their code I am doomed lolmao
                     console.log(old)
-                    console.log(box.children[4].children[0])
-                    if (!box.children[4].children[0]===old) {
+                    console.log(box.children[4].children[0].id)
+                    console.log(box.children[4].children[0].id===old)
+                    if (!box.children[4].children[0].id===old) {
                         mload()
                         clearInterval(thelooker); 
                     }
