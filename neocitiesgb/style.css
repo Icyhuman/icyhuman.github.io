@@ -1,6 +1,6 @@
 body{
-    background-image: url(imgs/bg.png);
-    animation: bganim 10s linear forwards infinite;
+    background-image: url(imgs/cork.png);
+    /*animation: bganim 10s linear forwards infinite;*/
 }
 
 @keyframes bganim{

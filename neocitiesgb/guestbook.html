@@ -9,14 +9,20 @@
     </head>
     <!-- Super duper copyright notice i dont care if you copy this code but if you do then 
      shoutout to the original creator, Icyhuman. Check out my cool site at snowcape.neocities.org-->
-    <body>
-        <div class="letterarea" id="larea" style="width: 1280px; height: 1280px; position: relative; margin: auto;">
+    <body style="width: 1360px; margin: 0px;">
+        <div class="letterarea" id="larea">
             <!-- begin wwww.htmlcommentbox.com -->
             <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
             <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
-            <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24iRV4k9fjBcVMo5S7aJ.SF."+"&opts=16798&num=15&ts=1779731807252");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+            <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24iRV4k9fjBcVMo5S7aJ.SF."+"&opts=16798&num=11&ts=1779731807252");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
             <!-- end www.htmlcommentbox.com -->
             <div class="torn" style="width: 300px; height: 190px;position: absolute; top: 0px;z-index: -1;"><p class="dearj">Dear Jørgen</p></div>
+            <div class="torn" style="width: 300px; height: 190px;position: absolute; bottom: 0px;right: 0px; z-index: -1;"><p class="dearj">Page controls</p></div>
+            <img src="imgs/pholder.png" style="position: absolute; width: 300px;height: 190px; top: 690px;left: 20px;transform: rotate(7deg);">
+            <img src="imgs/pholder.png" style="position: absolute; width: 100px;height: 100px; top: 220px;left: 10px;border-radius: 50px;">
+            <img src="imgs/pholder.png" style="position: absolute; width: 100px;height: 100px; top: 330px;left: 20px;border-radius: 50px;">
+            <img src="imgs/pholder.png" style="position: absolute; width: 230px;height: 170px; top: 20px;left: 1040px;transform: rotate(-5deg);">
+            <img src="imgs/pholder.png" style="position: absolute; width: 190px;height: 230px; top: 205px;left: 760px;transform: rotate(5deg);">
         </div>
         <script>
             const larea=document.getElementById('larea')
@@ -37,6 +43,8 @@
                 const datel = document.createElement("p");
                 datel.className="datel"
                 datel.innerText=date
+                const pin = document.createElement("img");
+                pin.className="pin"
 
                 larea.appendChild(letter)
                 letter.appendChild(dearj)
@@ -44,6 +52,7 @@
                 letter.appendChild(froml)
                 letter.appendChild(datel)
                 mainlbox.appendChild(mainl)
+                letter.appendChild(pin)
 
                 let styles=["hearts","cool","clouds","cherry","airmail","grafitti","dragonflies","stars","torn","roses","bluesky"]
                 let style = Math.floor(Math.random()* 11);
@@ -57,6 +66,8 @@
                 letter.addEventListener('mouseleave', () => {
                     letter.style.transform = "Rotate("+rotate+"deg)";
                     });
+                let pindex = Math.floor(Math.random()* 4);
+                pin.src="imgs/pin"+pindex+".png"
 
 
             }
@@ -74,12 +85,12 @@
             //    makeletter(mailbag[mail][0],mailbag[mail][1],mailbag[mail][2])
             //}
 
-            //for(let i=0;i<6;i++ ){
-            //makeletter(
-            //    "Filler letters because I don't want my layout feeling too empty. Also I need to make graphics for the holes in the layout",
-            //    "Myself",
-            //    "18 Decembulon 2140"
-            //)}
+            /*for(let i=0;i<11;i++ ){
+            makeletter(
+                "Filler letters because I need to test my layout. Lorem ipsum gaming.",
+                "Myself",
+                "18 Decembulon 2140"
+            )}*/
 
             const box = document.getElementById('HCB_comment_box');
             window.addEventListener('load', function() {
@@ -115,8 +126,8 @@
                 desc[0].innerHTML="Powered by <a target='_blank' href='https://www.htmlcommentbox.com'>Html Comment Box</a>"
                 console.log(desc[0])
                 navi.style.position="absolute"
-                navi.style.left="970px"
-                navi.style.top="880px"
+                navi.style.left="1000px"
+                navi.style.top="740px"
                 for(child of navi.children){
                     console.log(child)
                     child.addEventListener("click", function(){
