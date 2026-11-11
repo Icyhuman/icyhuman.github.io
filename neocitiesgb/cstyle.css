@@ -355,3 +355,25 @@ div.bluesky{
     color: rgb(1, 3, 31);
     margin-right: 5px;
 }
+
+div.halloween{
+    background-image: url(letters/halloween.png);
+}
+.halloween > .dearj{
+    color: rgb(254, 182, 118);
+    margin-left: 5px;
+}
+.halloween > .mainlbox{
+    color: rgb(251, 172, 103);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.halloween > .froml{
+    color: rgb(255, 158, 73);
+    bottom: -10px;
+    margin-right: 15px;
+}
+.halloween > .datel{
+    color: rgb(239, 237, 232);
+    margin-right: 5px;
+}
