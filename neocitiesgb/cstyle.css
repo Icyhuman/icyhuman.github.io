@@ -1,6 +1,8 @@
 .letterarea{
     width: 1280px; height: 900px; position: relative; margin: auto;border: 40px; border-style: solid;
     border-image: url(imgs/edges.png) 70 stretch;
+    background-image: url(imgs/cork.png);
+    z-index: 0;
 }
 
 div.letter{
@@ -42,6 +44,20 @@ div.mainlbox{
     bottom: 30px;
     overflow-wrap: break-word;
     overflow-y: scroll;
+}
+div.dusthover{
+    position: absolute; width: 300px;height: 230px; top: 660px;left: 10px;
+    z-index: 6;
+}
+.credit{
+    position: absolute; left: 300px; top: 0px; min-width: 200px;
+    border: 3px; border-color: black; border-style: solid;
+    background-color: rgb(236 207 212);
+    z-index: 6;
+    visibility: hidden;
+}
+div.dusthover:hover .credit{
+    visibility: visible;
 }
 
 div.letter:hover{
