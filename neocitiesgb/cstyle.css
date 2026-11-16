@@ -64,63 +64,63 @@ div.letter:hover{
     transform: none;
     transition: 0.15s;
 }
-div.letter:nth-of-type(3){
-    left:650px;
-    top: 20px;
-}
 div.letter:nth-of-type(4){
-    left:370px;
+    left:650px;
     top: 20px;
 }
 div.letter:nth-of-type(5){
+    left:370px;
+    top: 20px;
+}
+div.letter:nth-of-type(6){
     left:720px;
     top: 10px;
 }
-div.letter:nth-of-type(6){
+div.letter:nth-of-type(7){
     left:140px;
     top: 230px;
 }
-div.letter:nth-of-type(7){
+div.letter:nth-of-type(8){
     left:450px;
     top: 230px;
 }
-div.letter:nth-of-type(8){
-    left:20px;
-    top: 440px;
-}
 div.letter:nth-of-type(9){
-    left:330px;
+    left:20px;
     top: 440px;
 }
 div.letter:nth-of-type(10){
-    left:650px;
+    left:330px;
     top: 440px;
 }
 div.letter:nth-of-type(11){
+    left:650px;
+    top: 440px;
+}
+div.letter:nth-of-type(12){
     left:970px;
     top: 480px;
 }
-div.letter:nth-of-type(12){
+div.letter:nth-of-type(13){
     left:330px;
     top: 670px;
 }
-div.letter:nth-of-type(13){
+div.letter:nth-of-type(14){
     left:650px;
     top: 650px;
 }
-div.letter:nth-of-type(14){
+div.letter:nth-of-type(15){
     left:950px;
     top: 240px;
 }
-div.letter:nth-of-type(15){
+div.letter:nth-of-type(16){
     left:330px;
     top: 860px;
 }
-div.letter:nth-of-type(16){
+div.letter:nth-of-type(17){
     left:20px;
     top: 860px;
 }
-div.letter:nth-of-type(17){
+div.letter:nth-of-type(18){
     left:650px;
     top: 860px;
 }
